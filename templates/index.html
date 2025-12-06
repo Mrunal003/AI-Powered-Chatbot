@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tutor - Gemini Style</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="sidebar">
+        <div class="logo">✨ AI Tutor</div>
+        
+        <button class="new-chat-btn" onclick="startNewChat()">
+            + New Chat
+        </button>
+
+        <div class="history-list">
+            <p style="color: #888; font-size: 14px; padding: 10px;">Recent Chats</p>
+            <div id="history-list"></div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div id="chat-box" class="chat-box">
+            <div class="message bot-message">
+                <div class="bot-icon">🤖</div>
+                <div class="message-content">Hello! I'm your AI Java Tutor. Ready to learn?</div>
+            </div>
+        </div>
+
+        <div class="input-area">
+            <input type="text" id="user-input" placeholder="Ask a question about Java or DSA...">
+            <button onclick="sendMessage()">➤</button>
+        </div>
+        
+        <div class="footer-text">
+            AI can make mistakes. Please check important info.
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
