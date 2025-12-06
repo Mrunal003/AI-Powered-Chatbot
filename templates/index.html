@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Tutor - Gemini Style</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <div class="sidebar">
         <div class="logo">✨ AI Tutor</div>
-        
+
         <button class="new-chat-btn" onclick="startNewChat()">
             + New Chat
         </button>
@@ -31,10 +34,10 @@
         </div>
 
         <div class="input-area">
-            <input type="text" id="user-input" placeholder="Ask a question about Java or DSA...">
+            <input type="text" id="user-input" placeholder="Ask anything...">
             <button onclick="sendMessage()">➤</button>
         </div>
-        
+
         <div class="footer-text">
             AI can make mistakes. Please check important info.
         </div>
@@ -43,4 +46,5 @@
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </body>
+
 </html>

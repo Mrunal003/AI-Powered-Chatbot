@@ -105,7 +105,10 @@ function addMessageToChat(text, className) {
         messageDiv.innerText = text;
     } else {
         messageDiv.className = "message bot-message";
-        messageDiv.innerHTML = `<div class="bot-icon">✨</div><div class="message-content">${text}</div>`;
+        messageDiv.innerHTML = `
+            <div class="bot-icon">✨</div>
+            <div class="message-content">${marked.parse(text)}</div>
+        `;
     }
 
     chatBox.appendChild(messageDiv);
